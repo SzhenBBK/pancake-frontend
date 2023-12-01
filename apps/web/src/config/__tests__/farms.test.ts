@@ -1,7 +1,7 @@
 /* eslint-disable address/addr-type */
 import { SerializedFarm } from '@pancakeswap/farms'
-import farms1 from '@pancakeswap/farms/constants/eth'
 import farms56 from '@pancakeswap/farms/constants/bsc'
+import farms1 from '@pancakeswap/farms/constants/eth'
 import { Native } from '@pancakeswap/sdk'
 import { getLpContract } from 'utils/contractHelpers'
 import { describe, it } from 'vitest'
@@ -62,7 +62,7 @@ describe.concurrent(
     // The first pid using the new factory
     // BSC
     const START_PID = 2
-    const FACTORY_ADDRESS = '0xca143ce32fe78f1f7019d7d551a6402fc5350c73'
+    const FACTORY_ADDRESS = '0x65b3CC7a7cB167221266Fc93884717dE2DBd074e'
     const newFarmsToTest = farmsToTest.filter((farmSet) => farmSet[0] >= START_PID)
 
     it.each(newFarmsToTest)('farm %d is using correct factory address', async (pid, farm) => {
